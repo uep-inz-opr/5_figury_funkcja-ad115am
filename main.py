@@ -18,9 +18,9 @@ def calculate_area(*args):
     return area
 def calculate_sum_of_areas():
     sum = 0
-    number_of_figures = int(input("Podaj liczbe figur"))
+    number_of_figures = int(input())
     for figure in range (number_of_figures):
-        numbers=list(map(float,(input("Podaj dlugosci").split())))
+        numbers=list(map(float,(input().split())))
         sum += calculate_area(numbers)
         if(valid_input==False):
             sum="Błąd: można podać maksymalnie 3 liczby"
@@ -28,5 +28,5 @@ def calculate_sum_of_areas():
 
 
 
-    print("suma = "+str(round(sum, 2)))
+    print(str(round(sum, 2)))
 calculate_sum_of_areas()
